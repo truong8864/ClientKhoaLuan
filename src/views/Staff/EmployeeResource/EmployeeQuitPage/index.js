@@ -131,8 +131,9 @@ const EmployeeQuitPage = (props) => {
       </Grid>
       <Grid item>
         <Paper variant="outlined" className={classes.toolbar}>
-          <ToolBar data={ListProfile}
-          fields={fields}
+          <ToolBar
+            data={ListProfile}
+            fields={fields}
             onSearch={onSearch}
             setShowNewAndDetail={setShowNewAndDetail}
             RowSelected={RowSelected}
@@ -204,11 +205,11 @@ const fields = [
     key: "ReasonStopWorking",
     label: "Lí do nghỉ việc",
   },
-  { _style: { width: "150px" }, key: "UserCreate", label: "Người tạo" },
-  { _style: { width: "150px" }, key: "createdAt", label: "Ngày tạo" },
+  //{ _style: { width: "150px" }, key: "UserCreate", label: "Người tạo" },
+  //{ _style: { width: "150px" }, key: "createdAt", label: "Ngày tạo" },
   { _style: { width: "100px" }, key: "Status", label: "Trạng thái" },
-  { _style: { width: "150px" }, key: "UserApprove", label: "Người duyệt" },
-  { _style: { width: "150px" }, key: "DateQuitApprove", label: "Ngày duyệt" },
+  //{ _style: { width: "150px" }, key: "UserApprove", label: "Người duyệt" },
+  //{ _style: { width: "150px" }, key: "DateQuitApprove", label: "Ngày duyệt" },
   { _style: { width: "150px" }, key: "IsBlackList", label: "Danh sách đen" },
   {
     _style: { width: "150px" },
