@@ -88,7 +88,7 @@ const FileUpload = (props) => {
                 <CSVLink
                   headers={headers}
                   data={[]}
-                  filename={"cham-cong.csv"}
+                  filename={"cham-cong-mau.csv"}
                   className="btn btn-primary"
                   target="_blank"
                 >
@@ -144,8 +144,13 @@ export default FileUpload;
 
 const headers = [
   { label: "ProfileID", key: "ProfileID" },
-  { label: "ProfileName", key: "ProfileName" },
+  { label: "CodeEmp", key: "CodeEmp" },
+  { label: "CodeAttendance", key: "CodeAttendance" },
+  { label: "OrgStructureID", key: "OrgStructureID" },
   { label: "DateKeeping", key: "DateKeeping" },
   { label: "TimeIn", key: "TimeIn" },
   { label: "TimeOut", key: "TimeOut" },
+  { label: "TimeKeepingType", key: "TimeKeepingType" },
+  { label: "Status", key: "Status" },
+  { label: "Description", key: "Description" },
 ];
