@@ -53,8 +53,6 @@ const FileUpload = (props) => {
     reader.readAsDataURL(event.target.files[0]);
   };
 
-  console.log("Data:", DataImport ? DataImport : "KO CO J");
-
   const onUpload = async (event) => {
     let i = 0;
     while (i <= DataImport.length) {
