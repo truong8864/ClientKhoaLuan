@@ -17,9 +17,14 @@ const TheHeaderDropdown = (props) => {
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
           <CImg
-            src={"%PUBLIC_URL%/avatars/6.jpg"}
+            src={"%PUBLIC_URL%/avatars/ppj-logo.jpg"}
             className="c-avatar-img"
             alt="admin@bootstrapmaster.com"
+            block
+            fluid
+            fluidGrow
+            width={250}
+            height={50}
           />
         </div>
       </CDropdownToggle>
