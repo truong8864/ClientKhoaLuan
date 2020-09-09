@@ -68,7 +68,7 @@ const NewAndDetail = (props) => {
     if ("update" !== Option) {
       const res = await DayKeepingAPI.create(Document);
       alert("Thêm thành công");
-      setDocument(res.data.data);
+      setDocument(res.data);
       setOption("update");
       return setModifile(false);
     }
