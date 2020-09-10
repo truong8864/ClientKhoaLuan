@@ -54,13 +54,18 @@ const FileUpload = (props) => {
   };
 
   const onUpload = async (event) => {
-    let i = 0;
-    while (i <= DataImport.length) {
-      const DataUpload = DataImport.slice(i, i + 1000);
-      await DayKeepingAPI.uploadData({ data: DataUpload });
-      i = i + 1000;
+    try {
+      let i = 0;
+      while (i <= DataImport.length) {
+        console.log("DATA", DataUpload);
+        const DataUpload = DataImport.slice(i, i + 1000);
+        await DayKeepingAPI.uploadData({ data: DataUpload });
+        i = i + 1000;
+      }
+      alert("Đã tải lên");
+    } catch (error) {
+      alert("ERROR");
     }
-    alert("Đã tải lên");
   };
 
   return (
