@@ -22,6 +22,7 @@ import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import { CSVLink } from "react-csv";
 
 import StopWorkingAPI from "../../../../api/hre_stop_working.api";
+import ProfileAPI from "../../../../api/hre_profile.api";
 
 const useStyles = makeStyles((theme) => ({
   root: {

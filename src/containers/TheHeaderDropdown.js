@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   CBadge,
   CDropdown,
@@ -9,8 +9,25 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
+import AuthenticationAPI from "../api/authentication.api";
+
 const TheHeaderDropdown = (props) => {
   const onLogout = props.onLogout;
+  const [User, setUser] = useState({});
+
+  useEffect(() => {
+    const fetchAPI = async () => {
+      try {
+        const res = await AuthenticationAPI.checkLogged();
+        if ("DA_DANG_NHAP" === res.message) {
+          return setUser(res.decoder);
+        }
+      } catch (error) {
+        console.log("ERR");
+      }
+    };
+    fetchAPI();
+  }, [setIsLogged]);
 
   return (
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">
@@ -21,7 +38,9 @@ const TheHeaderDropdown = (props) => {
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
         <CDropdownItem header tag="div" color="light" className="text-center">
-          <strong>Account</strong>
+          <strong>
+            {!User.username ? "No user" : `${User.username}-${User.role}`}
+          </strong>
         </CDropdownItem>
 
         <CDropdownItem
