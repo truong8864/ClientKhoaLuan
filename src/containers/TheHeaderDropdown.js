@@ -27,7 +27,7 @@ const TheHeaderDropdown = (props) => {
       }
     };
     fetchAPI();
-  }, [setIsLogged]);
+  }, []);
 
   return (
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">
