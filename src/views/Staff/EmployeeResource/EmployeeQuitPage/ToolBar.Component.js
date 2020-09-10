@@ -21,6 +21,8 @@ import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import { CSVLink } from "react-csv";
 
+import StopWorkingAPI from "../../../../api/hre_stop_working.api";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: "4px",
