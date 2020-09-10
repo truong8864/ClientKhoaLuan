@@ -179,15 +179,42 @@ const NewAndDetail = (props) => {
               </Grid>
             </MuiPickersUtilsProvider>
             <Grid item xs={3}>
-              Trạng thái
-              <TextField
-                disabled
-                value={!Document.Status ? "" : Document.Status}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
+              <FormControl fullWidth>
+                Trạng thái
+                {
+                  <TextField
+                    value={!Document.Status ? "CHUA_DUYET" : Document.Status}
+                    onChange={(event) => {
+                      setDocument({
+                        ...Document,
+                        Status: event.target.value.trim(),
+                      });
+                    }}
+                    variant="outlined"
+                    size="small"
+                    select
+                  >
+                    {StatusValue.map((option) => (
+                      <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                }
+              </FormControl>
             </Grid>
+            {
+              // <Grid item xs={3}>
+              //   Trạng thái
+              // <TextField
+              //     disabled
+              //     value={!Document.Status ? "" : Document.Status}
+              //     variant="outlined"
+              //     size="small"
+              //     fullWidth
+              //   />
+              // </Grid>
+            }
           </Grid>
           <Grid className={classes.paper} container spacing={2}>
             <Grid item xs={6}>
@@ -288,3 +315,14 @@ const NewAndDetail = (props) => {
 };
 
 export default NewAndDetail;
+
+const StatusValue = [
+  {
+    value: "DA_DUYET",
+    label: "Đã duyệt",
+  },
+  {
+    value: "CHUA_DUYET",
+    label: "Chưa duyệt",
+  },
+];
