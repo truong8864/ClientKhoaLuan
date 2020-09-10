@@ -32,7 +32,7 @@ const calculate = (params) => {
 
 const uploadData = (data) => {
   const url = "/day-keepings/upload";
-  console.log(data);
+  console.log("AXIOS", data);
   return axiosClient.post(url, data);
 };
 
