@@ -57,8 +57,8 @@ const FileUpload = (props) => {
     try {
       let i = 0;
       while (i <= DataImport.length) {
-        console.log("DATA", DataUpload);
         const DataUpload = DataImport.slice(i, i + 1000);
+        console.log("DATA", DataUpload);
         await DayKeepingAPI.uploadData({ data: DataUpload });
         i = i + 1000;
       }
