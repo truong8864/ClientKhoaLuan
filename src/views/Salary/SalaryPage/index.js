@@ -131,6 +131,8 @@ const SalaryPage = () => {
             show={setShowDetail}
             onSearch={onSearch}
             RowsSelected={RowsSelected}
+            data={ListDataTimeKeeping}
+            fields={fields}
           />
         </Paper>
       </Grid>

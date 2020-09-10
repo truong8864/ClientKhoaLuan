@@ -44,7 +44,14 @@ const useStyles = makeStyles((theme) => ({
 
 const ToolBar = (props) => {
   const classes = useStyles();
-  const { onSearch, RowSelected, setshowNewProfile, setShowFile,data,fields} = props;
+  const {
+    onSearch,
+    RowSelected,
+    setshowNewProfile,
+    setShowFile,
+    data,
+    fields,
+  } = props;
   //console.log("ListProfile toll",ListProfile)
   const DeleteNewStaff = async (value) => {
     try {
@@ -89,9 +96,10 @@ const ToolBar = (props) => {
       <CForm onSubmit={onSearch} className={classes.right}>
         <div>
           {RowSelected.length !== 0 ? (
-            <Button onClick={() => {
-              DeleteNewStaff(RowSelected);
-            }}
+            <Button
+              onClick={() => {
+                DeleteNewStaff(RowSelected);
+              }}
               disabled={RowSelected.length === 0 ? true : false}
               color="primary"
             >
@@ -133,19 +141,17 @@ const ToolBar = (props) => {
           </IconButton>
         </div>
         <div className={classes.setting}>
-
-        <IconButton>
-        <Tooltip title="Export">
           <CSVLink
-          headers={fields}
-          data={data}
-          filename={"danh-sach-tiep-nhan.csv"}
-        >
-          <SaveAltIcon />
-        </CSVLink>
-          </Tooltip>
-        </IconButton>
-
+            headers={fields}
+            data={data}
+            filename={"danh-sach-tiep-nhan.csv"}
+          >
+            <IconButton>
+              <Tooltip title="Export">
+                <SaveAltIcon />
+              </Tooltip>
+            </IconButton>
+          </CSVLink>
           <IconButton>
             <Tooltip title="Cài đặt hiển thị">
               <SettingsIcon />

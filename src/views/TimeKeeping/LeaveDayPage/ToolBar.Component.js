@@ -105,12 +105,13 @@ const ToolBar = (props) => {
           </IconButton>
         </div>
         <div className={classes.setting}>
-          <IconButton>
-            <Tooltip title="Export">
-              <SaveAltIcon />
-            </Tooltip>
-          </IconButton>
-
+          {
+            // <IconButton>
+            //   <Tooltip title="Export">
+            //     <SaveAltIcon />
+            //   </Tooltip>
+            // </IconButton>
+          }
           <IconButton>
             <Tooltip title="Cài đặt hiển thị">
               <SettingsIcon />

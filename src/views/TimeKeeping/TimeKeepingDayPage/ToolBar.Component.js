@@ -133,17 +133,17 @@ const ToolBar = (props) => {
           </IconButton>
         </div>
         <div className={classes.setting}>
-          <IconButton>
-            <Tooltip title="Export">
-              <CSVLink
-                headers={fields}
-                data={data}
-                filename={"du-lieu-ngay-cong.csv"}
-              >
+          <CSVLink
+            headers={fields}
+            data={data}
+            filename={"du-lieu-ngay-cong.csv"}
+          >
+            <IconButton>
+              <Tooltip title="Export">
                 <SaveAltIcon />
-              </CSVLink>
-            </Tooltip>
-          </IconButton>
+              </Tooltip>
+            </IconButton>
+          </CSVLink>
 
           <IconButton>
             <Tooltip title="Cài đặt hiển thị">

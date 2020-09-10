@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 const ToolBar = (props) => {
   const classes = useStyles();
 
-  const { setConfimDelete, RowsSelected, onSearch, show,fields,data } = props;
+  const { setConfimDelete, RowsSelected, onSearch, show, fields, data } = props;
 
   return (
     <Toolbar variant="dense" disableGutters className={classes.root}>
@@ -79,18 +79,13 @@ const ToolBar = (props) => {
           </IconButton>
         </div>
         <div className={classes.setting}>
-        <IconButton>
-        <Tooltip title="Export">
-          <CSVLink
-          headers={fields}
-          data={data}
-          filename={"tong-hop-cong.csv"}
-        >
-          <SaveAltIcon />
-        </CSVLink>
-          </Tooltip>
-        </IconButton>
-
+          <CSVLink headers={fields} data={data} filename={"tong-hop-cong.csv"}>
+            <IconButton>
+              <Tooltip title="Export">
+                <SaveAltIcon />
+              </Tooltip>
+            </IconButton>
+          </CSVLink>
           <IconButton>
             <Tooltip title="Cài đặt hiển thị">
               <SettingsIcon />
