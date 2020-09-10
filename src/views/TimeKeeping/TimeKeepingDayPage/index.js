@@ -167,10 +167,14 @@ const TimeKeepingDayPage = () => {
                 return <td>{`${getTime(item.TimeOut)}`}</td>;
               },
               TotalDay: (item) => {
-                return <td>{`${getDays(item.Total)} ngày`}</td>;
+                return (
+                  <td>{item.Total ? `${getDays(item.Total)} ngày` : ""}</td>
+                );
               },
               TotalHours: (item) => {
-                return <td>{`${getHours(item.Total)} giờ`}</td>;
+                return (
+                  <td>{item.Total ? `${getHours(item.Total)} giờ` : ""}</td>
+                );
               },
             }}
           />
