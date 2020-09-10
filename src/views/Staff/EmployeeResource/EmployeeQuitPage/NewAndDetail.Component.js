@@ -80,8 +80,8 @@ const NewAndDetail = (props) => {
     const { _id, ...newDocument } = Document;
     const data = await StopWorkingAPI.update(_id, newDocument);
     setDocument({
-      ...data.data.data[0],
-      DateStop: new Date(data.data.data[0].DateStop),
+      ...data.data,
+      DateStop: new Date(data.data.DateStop),
     });
     alert("Lưu thành công");
     setStatusModifile(false);
@@ -249,30 +249,6 @@ const NewAndDetail = (props) => {
                   size="small"
                   fullWidth
                 />
-              </Grid>
-              <Grid item xs={3}>
-                <FormControl fullWidth>
-                  Ngày xin nghỉ
-                  <div>
-                    <KeyboardDatePicker
-                      inputVariant="outlined"
-                      size="small"
-                      fullWidth={false}
-                      className={classes.date}
-                      format="dd/MM/yyyy"
-                      maxDate={Date()}
-                      value={
-                        !Document.DateQuitSubmit
-                          ? null
-                          : Document.DateQuitSubmit
-                      }
-                      onChange={(date) => {
-                        setDocument({ ...Document, DateQuitSubmit: date });
-                        setStatusModifile(true);
-                      }}
-                    />
-                  </div>
-                </FormControl>
               </Grid>
             </Grid>
           </MuiPickersUtilsProvider>
