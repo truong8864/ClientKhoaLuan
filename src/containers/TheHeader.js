@@ -23,7 +23,7 @@ import {
   TheHeaderDropdownTasks,
 } from "./index";
 
-import AuthenticationAPI from "../api/authentication.api"
+import AuthenticationAPI from "../api/authentication.api";
 
 const TheHeader = (props) => {
   const dispatch = useDispatch();
@@ -66,21 +66,12 @@ const TheHeader = (props) => {
 
       <CHeaderNav className="d-md-down-none mr-auto">
         <CHeaderNavItem className="px-3">
-          <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
-        </CHeaderNavItem>
-        <CHeaderNavItem className="px-3">
-          <CHeaderNavLink to="/users">Users</CHeaderNavLink>
-        </CHeaderNavItem>
-        <CHeaderNavItem className="px-3">
-          <CHeaderNavLink>Settings</CHeaderNavLink>
+          <CHeaderNavLink to="/dashboard">HOME</CHeaderNavLink>
         </CHeaderNavItem>
       </CHeaderNav>
 
       <CHeaderNav className="px-3">
-        <TheHeaderDropdownNotif />
-        <TheHeaderDropdownTasks />
-        <TheHeaderDropdownMssg />
-        <TheHeaderDropdown onLogout={signOut}/>
+        <TheHeaderDropdown onLogout={signOut} />
       </CHeaderNav>
 
       {

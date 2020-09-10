@@ -16,16 +16,7 @@ const TheHeaderDropdown = (props) => {
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
-          <CImg
-            src={"%PUBLIC_URL%/avatars/ppjlogo.jpg"}
-            className="c-avatar-img"
-            alt="admin@bootstrapmaster.com"
-            block
-            fluid
-            fluidGrow
-            width={250}
-            height={50}
-          />
+          <CImg src={"avatars/6.jpg"} className="c-avatar-img" alt="IMG" />
         </div>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
