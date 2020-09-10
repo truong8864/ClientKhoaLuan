@@ -16,6 +16,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import SaveAltIcon from "@material-ui/icons/SaveAlt";
 import SettingsIcon from "@material-ui/icons/Settings";
 
+import { CSVLink } from "react-csv";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: "4px",
@@ -80,8 +82,8 @@ const ToolBar = (props) => {
         </div>
         <div className={classes.setting}>
           <CSVLink
-            headers={HeaderExport}
-            data={Export}
+            headers={fields}
+            data={data}
             filename={"luong-nhan-vien.csv"}
           >
             <IconButton>
